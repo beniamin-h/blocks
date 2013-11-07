@@ -1,0 +1,99 @@
+@CHARSET "UTF-8";
+/* normalize.css 2011-06-23T00:50 UTC //github.com/jonathantneal/normalize.css */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}html{cursor:default;font-size:100%;overflow-y:scroll;-webkit-tap-highlight-color:transparent;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body,form,input,button,select,textarea{font-size:100%;margin:0}a,a:active,a:hover{outline:none}a:focus{outline:thin dotted}abbr{_border-bottom:expression(this.title ? '1px dotted':'none')}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}mark{background:#FF0;color:#000}pre,code,kbd,samp{font-family:monospace,monospace;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small,sub,sup{font-size:75%}sub,sup{line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}nav ul{list-style:none}audio[controls],canvas,video{display:inline-block;*display:inline}audio{display:none;_display:expression(this.controls ? 'inline':'none');*zoom:1}audio[controls]{display:inline-block}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){ overflow:hidden}legend{*margin-left:-7px}button,input,select,textarea{vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal;_overflow:expression(this.type == 'button|reset|submit' ? 'visible':'')}button,input[type="button"],input[type="reset"],input[type="submit"]{overflow:visible;-webkit-appearance:button}input[type="checkbox"],input[type="radio"]{box-sizing:border-box}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration{ -webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+
+body {
+    font-size: 50px;
+    padding: 20px;
+}
+
+.clear {
+    clear: both;
+}
+
+.board {
+    width: 2000px;
+    height: 2000px;
+    background-color: #000;
+    position: relative;
+}
+
+.board_perspective {
+    width: 1000px;
+    height: 1000px;
+    overflow: hidden;
+    float: left;
+    margin: 10px;
+}
+
+.board_bg {
+    margin-right: 20px;
+    background-color: black;
+    float: left;
+}
+
+.scores {
+    float: left;
+}
+
+.dead {
+    display: none;
+}
+
+.dead.visible {
+    display: block;
+}
+
+.block {
+    display: block;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background-color: #999;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+}
+
+.scores .info_block {
+    float: left;
+    width: 45px;
+    height: 45px;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    margin-top: 8px;
+    margin-right: 8px;
+}
+
+.active {
+    -moz-border-radius: 45px;
+    -webkit-border-radius: 45px;
+    border-radius: 45px;
+    background-color: #fff !important;
+}
+
+.animated {
+    -webkit-animation-fill-mode: both;
+    -moz-animation-fill-mode: both;
+    -ms-animation-fill-mode: both;
+    -o-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1.1s ease-in-out;
+    -moz-animation-duration: 1.1s ease-in-out;
+    -ms-animation-duration: 1.1s ease-in-out;
+    -o-animation-duration: 1.1s ease-in-out;
+    animation-duration: 1.1s ease-in-out;
+    -moz-transition: all .1s ease-in-out 0s;
+    -o-transition: all .1s ease-in-out 0s;
+    -webkit-transition: all .1s ease-in-out 0s;
+    transition: all .15s ease-in-out 0s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.damaged {
+    background-color: Red !important;
+}
